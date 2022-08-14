@@ -6,26 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".features.navigationHome.NavigationFragment">
 
-    <TableLayout
-        android:id="@+id/tableLayout"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.tabs.TabItem
 
-    </TableLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:text="@string/home" />
+
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:text="@string/profile" />
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:text="@string/cart" />
+
+    </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
+        android:id="@+id/homeViewPager"
         android:layout_height="663dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+
+
 
     </androidx.viewpager2.widget.ViewPager2>
 
