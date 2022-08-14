@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:background="#5956E9"
+        android:background="@color/blue_background"
         app:lottie_rawRes="@raw/coffee_loader"
         android:elevation="5sp"
 

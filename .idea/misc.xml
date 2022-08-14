@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/megab/AndroidStudioProjects/ECommerceApp/app/src/main/res/drawable-v24/round_corners.xml" value="0.199" />
+        <entry key="..\:/Users/megab/AndroidStudioProjects/ECommerceApp/app/src/main/res/font/fonts.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/megab/AndroidStudioProjects/ECommerceApp/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
+        <entry key="..\:/Users/megab/AndroidStudioProjects/ECommerceApp/app/src/main/res/layout/fragment_on_boarding.xml" value="0.264" />
         <entry key="..\:/Users/megab/AndroidStudioProjects/ECommerceApp/app/src/main/res/layout/fragment_splash.xml" value="0.22780797101449277" />
       </map>
     </option>
