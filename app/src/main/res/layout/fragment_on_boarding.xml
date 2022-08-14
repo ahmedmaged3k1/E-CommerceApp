@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_background"
-    tools:context=".entities.onBoarding.OnBoardingFragment">
+    tools:context=".features.onBoarding.OnBoardingFragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,25 +32,28 @@
         android:layout_marginBottom="94dp"
         android:background="@color/blue_background"
         android:elevation="5sp"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/coffe_icon">
+        app:lottie_rawRes="@raw/coffee_icon">
 
     </com.airbnb.lottie.LottieAnimationView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/getStartedButton"
         android:layout_width="215dp"
         android:layout_height="71dp"
         android:layout_marginBottom="84dp"
 
+
         android:background="@drawable/round_corners"
         android:text="@string/get_started"
+        android:textSize="18sp"
+        android:textFontWeight="200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
