@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.e_commerceapp.databinding.FragmentNavigationBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
+import com.wajahatkarim3.easyflipviewpager.CardFlipPageTransformer2
 
 
 class NavigationFragment : Fragment() {
@@ -33,7 +34,7 @@ class NavigationFragment : Fragment() {
 
         binding.tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
-                binding.homeViewPager.currentItem = tab.position;
+                binding.homeViewPager.currentItem = tab.position
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
@@ -47,6 +48,9 @@ class NavigationFragment : Fragment() {
 
     private fun viewPagerInitialization() {
         binding.homeViewPager.adapter = PageAdapter(this)
+        val cardFlipPageTransformer = CardFlipPageTransformer2()
+        cardFlipPageTransformer.isScalable = true
+        binding.homeViewPager.setPageTransformer(cardFlipPageTransformer)
         binding.homeViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {

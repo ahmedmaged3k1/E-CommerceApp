@@ -16,5 +16,8 @@
     <string name="favourites">Favourites</string>
     <string name="cart">Cart</string>
     <string name="profile">Profile</string>
+    <string name="espresso">Espresso</string>
+    <string name="todo">TODO</string>
+    <string name="a">a</string>
 
 </resources>

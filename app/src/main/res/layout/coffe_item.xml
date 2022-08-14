@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+        <variable
+            name="coffee"
+            type="com.example.e_commerceapp.entities.Coffee" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="94dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_baseline_coffee_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="129dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="56dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/espresso"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_chevron_right_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.511"
+            android:contentDescription="@string/a">
+
+        </ImageButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
