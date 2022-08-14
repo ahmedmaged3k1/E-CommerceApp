@@ -11,10 +11,11 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/coffeeImage"
             android:layout_width="94dp"
             android:layout_height="88dp"
             android:layout_marginStart="16dp"
+            app:coffeeImage="@{coffee}"
             android:src="@drawable/ic_baseline_coffee_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,14 +30,15 @@
             android:layout_marginStart="56dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="@string/espresso"
+            android:id="@+id/coffeeName"
+            android:text="@{coffee.name}"
             android:textColor="@color/black"
             android:textFontWeight="800"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageButton2"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/coffeeImage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.52">
 

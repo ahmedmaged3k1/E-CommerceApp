@@ -28,13 +28,14 @@ class CoffeeRecyclerViewAdapter :
     }
 
     override fun onBindViewHolder(holder: CoffeeViewHolder, position: Int) {
-        onBindViewHolder(holder, position)
+        holder.bind(getItem(position))
     }
 
     inner class CoffeeViewHolder constructor(private val binding: CoffeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBindItemHolder(holder: CoffeeViewHolder, position: Int) {
-
+        fun bind(item: Coffee) {
+            binding.coffee = item
+            binding.executePendingBindings()
         }
 
 
