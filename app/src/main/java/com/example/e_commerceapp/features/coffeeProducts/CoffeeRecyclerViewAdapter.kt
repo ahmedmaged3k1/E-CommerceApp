@@ -1,10 +1,13 @@
-package com.example.e_commerceapp.features.navigationHome
+package com.example.e_commerceapp.features.coffeeProducts
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.e_commerceapp.databinding.CoffeItemBinding
 import com.example.e_commerceapp.entities.Coffee
 
@@ -28,14 +31,17 @@ class CoffeeRecyclerViewAdapter :
     }
 
     override fun onBindViewHolder(holder: CoffeeViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind( getItem(position))
+        Log.d(TAG, "onBindViewHolder:  entered ")
+
     }
 
     inner class CoffeeViewHolder constructor(private val binding: CoffeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Coffee) {
+        fun bind( item: Coffee?) {
             binding.coffee = item
             binding.executePendingBindings()
+
         }
 
 

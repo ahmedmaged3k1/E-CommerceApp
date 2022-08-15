@@ -9,5 +9,4 @@ interface CoffeeRemoteRepository {
     suspend fun login(): User
     suspend fun updateProfile(): Boolean
 
-
 }
