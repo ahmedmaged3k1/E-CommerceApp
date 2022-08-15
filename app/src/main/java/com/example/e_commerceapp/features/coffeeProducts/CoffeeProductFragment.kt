@@ -7,12 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.example.e_commerceapp.databinding.FragmentCoffeeProductBinding
 import com.example.e_commerceapp.entities.Coffee
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 
+
+@AndroidEntryPoint
 class CoffeeProductFragment : Fragment() {
     private lateinit var binding: FragmentCoffeeProductBinding
     private val coffeeRecyclerViewAdapter = CoffeeRecyclerViewAdapter()
+    private val viewModel  by viewModels<CoffeeViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,6 +29,9 @@ class CoffeeProductFragment : Fragment() {
 
         initializeRecyclerView()
         return binding.root
+    }
+    private fun initializeViewModel(){
+        val viewModel = HiltViewModel()
     }
 
     private fun initializeRecyclerView() {
