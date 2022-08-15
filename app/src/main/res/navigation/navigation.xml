@@ -36,5 +36,18 @@
         android:id="@+id/navigationFragment"
         android:name="com.example.e_commerceapp.features.navigationHome.NavigationFragment"
         android:label="fragment_navigation"
-        tools:layout="@layout/fragment_navigation" />
+        tools:layout="@layout/fragment_navigation" >
+        <action
+            android:id="@+id/action_navigationFragment_to_coffeeDetailsFragment"
+            app:destination="@id/coffeeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeDetailsFragment"
+        android:name="com.example.e_commerceapp.features.CoffeeDetailsFragment"
+        android:label="fragment_coffee_details"
+        tools:layout="@layout/fragment_coffee_details" >
+        <argument
+            android:name="coffee"
+            app:argType="com.example.e_commerceapp.entities.Coffee" />
+    </fragment>
 </navigation>

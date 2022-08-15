@@ -27,6 +27,7 @@ class CoffeeProductFragment : Fragment() {
     ): View {
         binding = FragmentCoffeeProductBinding.inflate(inflater, container, false)
         initializeRecyclerView()
+
         return binding.root
     }
     private fun initializeViewModel(){

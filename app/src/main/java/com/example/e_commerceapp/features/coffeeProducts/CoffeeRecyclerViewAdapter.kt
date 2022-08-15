@@ -1,15 +1,14 @@
 package com.example.e_commerceapp.features.coffeeProducts
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.e_commerceapp.databinding.CoffeItemBinding
 import com.example.e_commerceapp.entities.Coffee
+import com.example.e_commerceapp.features.navigationHome.NavigationFragmentDirections
 
 val diffCallback = object : DiffUtil.ItemCallback<Coffee>() {
     override fun areItemsTheSame(oldItem: Coffee, newItem: Coffee): Boolean {
@@ -31,17 +30,29 @@ class CoffeeRecyclerViewAdapter :
     }
 
     override fun onBindViewHolder(holder: CoffeeViewHolder, position: Int) {
-        holder.bind( getItem(position))
-        Log.d(TAG, "onBindViewHolder:  entered ")
+        holder.bind(getItem(position))
+
 
     }
 
     inner class CoffeeViewHolder constructor(private val binding: CoffeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind( item: Coffee?) {
+        fun bind(item: Coffee?) {
             binding.coffee = item
             binding.executePendingBindings()
 
+        }
+
+        init {
+            binding.imageButton2.setOnClickListener {
+                val action =
+                    NavigationFragmentDirections.actionNavigationFragmentToCoffeeDetailsFragment(
+                        getItem(position)
+                    )
+
+                binding.root.findNavController().navigate(action)
+
+            }
         }
 
 

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.example.e_commerceapp.databinding.FragmentNavigationBinding
 import com.google.android.material.tabs.TabLayout
@@ -22,6 +23,7 @@ class NavigationFragment : Fragment() {
     ): View {
         binding = FragmentNavigationBinding.inflate(inflater, container, false)
         homeScreenNavigationSetup()
+
         return binding.root
     }
 
