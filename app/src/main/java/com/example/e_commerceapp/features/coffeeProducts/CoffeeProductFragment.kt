@@ -19,19 +19,18 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 class CoffeeProductFragment : Fragment() {
     private lateinit var binding: FragmentCoffeeProductBinding
     private val coffeeRecyclerViewAdapter = CoffeeRecyclerViewAdapter()
-    private val viewModel  by viewModels<CoffeeViewModel>()
+    private val viewModel: CoffeeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCoffeeProductBinding.inflate(inflater, container, false)
-
         initializeRecyclerView()
         return binding.root
     }
     private fun initializeViewModel(){
-        val viewModel = HiltViewModel()
+
     }
 
     private fun initializeRecyclerView() {

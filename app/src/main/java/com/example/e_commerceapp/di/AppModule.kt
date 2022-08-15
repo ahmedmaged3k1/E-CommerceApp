@@ -3,6 +3,7 @@ package com.example.e_commerceapp.di
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.CoffeeApiService
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.CoffeeRemoteRepositoryImp
 import com.example.e_commerceapp.data.network.Credentials
+import com.example.e_commerceapp.domain.repositories.CoffeeRemoteRepository
 import com.example.e_commerceapp.domain.useCases.CoffeeUseCase
 import dagger.Module
 import dagger.Provides
@@ -24,8 +25,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideMyCoffeeUseCase(coffeeRemoteRepositoryImp: CoffeeRemoteRepositoryImp): CoffeeUseCase {
-        return CoffeeUseCase(coffeeRemoteRepositoryImp)
+    fun provideMyCoffeeUseCase(coffeeRemoteRepository: CoffeeRemoteRepository): CoffeeUseCase {
+        return CoffeeUseCase(coffeeRemoteRepository)
     }
 
 }
