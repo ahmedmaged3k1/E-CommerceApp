@@ -1,9 +1,11 @@
 package com.example.e_commerceapp.di
 
-import com.example.e_commerceapp.data.dataSource.remoteDataSource.CoffeeApiService
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.ApiService
 import com.example.e_commerceapp.data.network.Credentials
-import com.example.e_commerceapp.domain.repositories.CoffeeRemoteRepository
+import com.example.e_commerceapp.domain.repositories.RemoteRepository
 import com.example.e_commerceapp.domain.useCases.CoffeeProductsUseCase
+import com.example.e_commerceapp.domain.useCases.UserLoginUseCase
+import com.example.e_commerceapp.domain.useCases.UserRegistrationUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +21,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideMyCoffeeApi(): CoffeeApiService {
+    fun provideMyCoffeeApi(): ApiService {
         val retrofit by lazy {
             val okHttpClient = OkHttpClient.Builder().addInterceptor(
                 HttpLoggingInterceptor().apply {
@@ -30,7 +32,7 @@ object AppModule {
                 .addConverterFactory(GsonConverterFactory.create()).build()
         }
         val api by lazy {
-            retrofit.create(CoffeeApiService::class.java)
+            retrofit.create(ApiService::class.java)
         }
         return api
     }
@@ -38,8 +40,19 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideMyCoffeeUseCase(coffeeRemoteRepository: CoffeeRemoteRepository): CoffeeProductsUseCase {
-        return CoffeeProductsUseCase(coffeeRemoteRepository)
+    fun provideMyCoffeeUseCase(remoteRepository: RemoteRepository): CoffeeProductsUseCase {
+        return CoffeeProductsUseCase(remoteRepository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUserRegistrationUseCase(remoteRepository: RemoteRepository): UserRegistrationUseCase {
+        return UserRegistrationUseCase(remoteRepository)
+    }
+    @Provides
+    @Singleton
+    fun provideUserLoginUseCase(remoteRepository: RemoteRepository): UserLoginUseCase {
+        return UserLoginUseCase(remoteRepository)
     }
 
 }

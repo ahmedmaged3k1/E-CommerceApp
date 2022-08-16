@@ -1,19 +1,19 @@
 package com.example.e_commerceapp.data.dataSource.remoteDataSource
 
-import com.example.e_commerceapp.domain.repositories.CoffeeRemoteRepository
+import com.example.e_commerceapp.domain.repositories.RemoteRepository
 import com.example.e_commerceapp.entities.Coffee
 import com.example.e_commerceapp.entities.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class CoffeeRemoteRepositoryImp @Inject constructor(private val coffeeApiService: CoffeeApiService) :
-    CoffeeRemoteRepository {
+class RemoteRepositoryImp @Inject constructor(private val apiService: ApiService) :
+    RemoteRepository {
     private lateinit var coffEeList: List<Coffee>
     override suspend fun getAllCoffeeProduct(authToken: String): List<Coffee> {
         withContext(Dispatchers.Default) {
             try {
-                val response = coffeeApiService.getAllCoffeeProduct(authToken).body() ?: listOf()
+                val response = apiService.getAllCoffeeProduct(authToken).body() ?: listOf()
 
                 coffEeList = response
 
@@ -28,7 +28,7 @@ class CoffeeRemoteRepositoryImp @Inject constructor(private val coffeeApiService
     override suspend fun registerNewUser(user: User): Boolean {
         try {
 
-            val response = coffeeApiService.registerNewUser(user).code() ?: false
+            val response = apiService.registerNewUser(user).code() ?: false
             if (response == 200)
                 return true
 
@@ -42,8 +42,8 @@ class CoffeeRemoteRepositoryImp @Inject constructor(private val coffeeApiService
     override suspend fun login(user: User): User? {
         try {
 
-            val responseCode = coffeeApiService.login(user).code()
-            val response = coffeeApiService.login(user).body()
+            val responseCode = apiService.login(user).code()
+            val response = apiService.login(user).body()
 
             if (responseCode == 200)
                 return response

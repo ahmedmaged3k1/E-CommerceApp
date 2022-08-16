@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_navigationFragment_to_coffeeDetailsFragment"
             app:destination="@id/coffeeDetailsFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.e_commerceapp.entities.User" />
     </fragment>
     <fragment
         android:id="@+id/coffeeDetailsFragment"

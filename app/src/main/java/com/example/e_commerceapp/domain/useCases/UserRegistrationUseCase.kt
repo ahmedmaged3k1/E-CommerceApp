@@ -1,4 +1,11 @@
 package com.example.e_commerceapp.domain.useCases
 
-class UserRegistrationUseCase {
+import com.example.e_commerceapp.domain.repositories.RemoteRepository
+import com.example.e_commerceapp.entities.User
+
+class UserRegistrationUseCase(private val remoteRepository: RemoteRepository) {
+    suspend fun registerUser(user: User): Boolean {
+
+        return remoteRepository.registerNewUser(user)
+    }
 }

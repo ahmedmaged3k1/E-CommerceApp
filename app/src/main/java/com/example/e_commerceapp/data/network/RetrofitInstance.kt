@@ -1,6 +1,6 @@
 package com.example.e_commerceapp.data.network
 
-import com.example.e_commerceapp.data.dataSource.remoteDataSource.CoffeeApiService
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -21,10 +21,10 @@ class RetrofitInstance {
         }
 
         private val api by lazy {
-            retrofit.create(CoffeeApiService::class.java)
+            retrofit.create(ApiService::class.java)
         }
 
-        fun getCoffeeApi(): CoffeeApiService {
+        fun getCoffeeApi(): ApiService {
             return api
         }
     }

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="user"
-            type="com.example.e_commerceapp.entities.User" />
+            type="com.example.e_commerceapp.features.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -173,6 +173,8 @@
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
+            android:text="@={user.userEmail}"
+
             android:layout_marginStart="20dp"
             android:layout_marginBottom="28dp"
             android:autofillHints=""
@@ -195,6 +197,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginBottom="64dp"
             android:autofillHints=""
+            android:text="@={user.userPassword}"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:inputType="textPassword"
             android:paddingStart="20dp"
@@ -212,6 +215,8 @@
             android:layout_marginBottom="96dp"
             android:background="@drawable/round_corners_colured"
             android:text="@string/login"
+            android:onClick="@{() -> user.login()}"
+
             android:textFontWeight="200"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

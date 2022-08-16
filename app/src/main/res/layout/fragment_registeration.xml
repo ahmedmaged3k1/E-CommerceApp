@@ -6,7 +6,7 @@
 
         <variable
             name="user"
-            type="com.example.e_commerceapp.entities.User" />
+            type="com.example.e_commerceapp.features.registration.RegistrationViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -194,6 +194,7 @@
             android:layout_height="66dp"
 android:hint="@string/email"
             android:layout_marginStart="20dp"
+            android:text="@={user.userEmail}"
             android:layout_marginBottom="16dp"
             android:autofillHints=""
             android:drawableStart="@drawable/ic_baseline_email_24"
@@ -213,6 +214,8 @@ android:hint="@string/email"
             android:layout_height="66dp"
             android:layout_marginStart="20dp"
             android:hint="@string/name"
+            android:text="@={user.userName}"
+
             android:layout_marginBottom="24dp"
             android:autofillHints=""
             android:drawableStart="@drawable/ic_baseline_person_24"
@@ -232,6 +235,8 @@ android:hint="@string/email"
             android:layout_height="66dp"
             android:layout_marginStart="20dp"
             android:hint="@string/password"
+            android:text="@={user.userPassword}"
+
             android:layout_marginBottom="16dp"
             android:autofillHints=""
             android:drawableStart="@drawable/ic_baseline_lock_24"
@@ -252,6 +257,7 @@ android:hint="@string/email"
             android:background="@drawable/round_corners_colured"
             android:text="@string/signup"
             android:textFontWeight="200"
+            android:onClick="@{() -> user.register()}"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

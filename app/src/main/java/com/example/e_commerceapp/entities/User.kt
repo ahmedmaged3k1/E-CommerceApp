@@ -8,4 +8,6 @@ import kotlinx.parcelize.Parcelize
 data class User(
     @SerializedName("userName" ) var userName : String? = null,
     @SerializedName("email"    ) var email    : String? = null,
-    @SerializedName("token"    ) var token    : String? = null) : Parcelable
+    var password : String? = null,
+    @SerializedName("token"    ) var token    : String? = null
+) : Parcelable

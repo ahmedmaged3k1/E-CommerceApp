@@ -7,7 +7,7 @@ import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.*
 
-interface CoffeeApiService {
+interface ApiService {
     @GET("/product/all")
     suspend fun getAllCoffeeProduct(@Header("Authorization" )authToken : String): Response<List<Coffee>>
 

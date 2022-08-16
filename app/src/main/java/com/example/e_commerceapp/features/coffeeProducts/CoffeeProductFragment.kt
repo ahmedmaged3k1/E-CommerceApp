@@ -27,7 +27,7 @@ class CoffeeProductFragment : Fragment() {
         initializeRecyclerView()
         val token =
             "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE2NjA2Njc0MTMsImV4cCI6MTY2MDc2MzgxM30.RCOlsHxcgA4n8ivJRMvVTDmehV6VdbaTjSURz4vLJXOUwg0uNVTQBd-1j6xXa-mxXTAeP005rBTuXEIh036NIQ"
-        viewModel.getAllCoffees(token)
+        viewModel.getAllCoffees("Bearer $token")
         Log.d(TAG, "onCreateView entered : ${viewModel.coffeeList.value?.size}")
         return binding.root
     }
