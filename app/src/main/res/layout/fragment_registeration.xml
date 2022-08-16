@@ -217,7 +217,7 @@
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:textColorHint="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
+            app:layout_constraintBottom_toTopOf="@+id/signUpButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -242,7 +242,7 @@
             tools:ignore="RtlSymmetry" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/getStartedButton"
+            android:id="@+id/signUpButton"
             android:layout_width="249dp"
             android:layout_height="71dp"
             android:layout_marginBottom="28dp"

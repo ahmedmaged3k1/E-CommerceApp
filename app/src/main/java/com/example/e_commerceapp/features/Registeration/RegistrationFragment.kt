@@ -1,19 +1,14 @@
 package com.example.e_commerceapp.features.Registeration
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.e_commerceapp.R
-import com.example.e_commerceapp.databinding.FragmentLoginBinding
 import com.example.e_commerceapp.databinding.FragmentRegisterationBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 
 class RegistrationFragment : Fragment() {
@@ -24,19 +19,37 @@ class RegistrationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentRegisterationBinding.inflate(inflater, container, false)
-       // buttonOnClick()
+        buttonOnClick()
         return binding.root
     }
- /*   private fun buttonOnClick() {
-        binding.getStartedButton.setOnClickListener {
-            navigate(it)
+
+    private fun buttonOnClick() {
+        binding.signUpButton.setOnClickListener {
+            if (validateLogin()) navigate(it)
         }
 
-    }*/
+    }
+
+    private fun validateLogin(): Boolean {
+        if (binding.registrationName.text.isEmpty()||binding.registrationEmail.text.isEmpty()||binding.registrationPassword.text.isEmpty())
+        {
+            val text = "Please Complete All Fields"
+            val duration = Toast.LENGTH_SHORT
+            val applicationContext = activity
+            Toast.makeText(applicationContext, text, duration).show()
+
+            return false
+        }
+        register()
+        return true
+    }
+    private fun register(){
+
+    }
 
     private fun navigate(view: View) {
 
-        view.findNavController().navigate(R.id.action_loginFragment_to_navigationFragment)
+        view.findNavController().navigate(R.id.action_registerationFragment_to_loginFragment)
     }
 
 }
