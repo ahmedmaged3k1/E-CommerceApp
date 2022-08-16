@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.loginScreen.LoginFragment">
+        tools:context=".features.login.LoginFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -169,6 +169,7 @@
 
         <EditText
             android:id="@+id/loginEmail"
+            android:hint="@string/email"
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
@@ -190,6 +191,7 @@
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
+            android:hint="@string/password"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="64dp"
             android:autofillHints=""

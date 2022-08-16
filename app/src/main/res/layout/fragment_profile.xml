@@ -6,13 +6,13 @@
 
         <variable
             name="user"
-            type="com.example.e_commerceapp.features.profileScreen.ProfileFragmentViewModel" />
+            type="com.example.e_commerceapp.features.profile.ProfileFragmentViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.profileScreen.ProfileFragment">
+        tools:context=".features.profile.ProfileFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -189,6 +189,7 @@
 
         <EditText
             android:id="@+id/updateEmail"
+            android:hint="@string/email"
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
@@ -211,6 +212,7 @@
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
+            android:hint="@string/name"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="28dp"
             android:autofillHints=""
@@ -230,6 +232,7 @@
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
+            android:hint="@string/password"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="24dp"
             android:autofillHints=""

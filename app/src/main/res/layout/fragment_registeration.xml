@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.Registeration.RegistrationFragment">
+        tools:context=".features.registration.RegistrationFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -192,6 +192,7 @@
             style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="357dp"
             android:layout_height="66dp"
+android:hint="@string/email"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="16dp"
             android:autofillHints=""
@@ -211,6 +212,7 @@
             android:layout_width="357dp"
             android:layout_height="66dp"
             android:layout_marginStart="20dp"
+            android:hint="@string/name"
             android:layout_marginBottom="24dp"
             android:autofillHints=""
             android:drawableStart="@drawable/ic_baseline_person_24"
@@ -229,6 +231,7 @@
             android:layout_width="357dp"
             android:layout_height="66dp"
             android:layout_marginStart="20dp"
+            android:hint="@string/password"
             android:layout_marginBottom="16dp"
             android:autofillHints=""
             android:drawableStart="@drawable/ic_baseline_lock_24"

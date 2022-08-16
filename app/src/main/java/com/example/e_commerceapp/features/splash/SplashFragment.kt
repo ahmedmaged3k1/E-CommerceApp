@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.splashScreen
+package com.example.e_commerceapp.features.splash
 
 import android.os.Bundle
 import android.os.Handler

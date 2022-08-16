@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.Registeration
+package com.example.e_commerceapp.features.registration
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,7 +17,7 @@ class RegistrationFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentRegisterationBinding.inflate(inflater, container, false)
         buttonOnClick()
         return binding.root

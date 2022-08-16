@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.profileScreen
+package com.example.e_commerceapp.features.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater

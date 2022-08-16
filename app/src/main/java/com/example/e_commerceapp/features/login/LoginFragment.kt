@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.loginScreen
+package com.example.e_commerceapp.features.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -16,7 +16,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         getStartedButton()
         registerButton()

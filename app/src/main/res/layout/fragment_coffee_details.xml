@@ -1,14 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".features.CoffeeDetailsFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="coffee"
+            type="com.example.e_commerceapp.entities.Coffee" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".features.CoffeeDetailsFragment">
 
-</FrameLayout>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="53dp"
+            android:id="@+id/backButton"
+            android:layout_height="68dp"
+            android:src="@drawable/ic_baseline_chevron_left_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="305dp"
+
+            android:layout_height="138dp"
+            android:contentDescription="@string/coffeeitem"
+            android:src="@drawable/ic_baseline_coffee_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/coffeeDetailsName"
+            android:layout_width="120dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/espresso"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/coffeeDetailsPrice"
+            app:layout_constraintEnd_toStartOf="@+id/coffeeDetailsQuantity"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.0">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/coffeeDetailsPrice"
+            android:layout_width="120dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif"
+
+            android:gravity="center"
+            android:text="@string/_30_dollars"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toStartOf="@+id/coffeeDetailsQuantity"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/cupMedium"
+            android:layout_width="60dp"
+            android:layout_height="66dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/cupmedium"
+            android:src="@drawable/ic_cup_svgrepo_com"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toStartOf="@+id/cupLarge"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintVertical_bias="0.394">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/cupSmall"
+            android:layout_width="37dp"
+            android:layout_height="43dp"
+            android:contentDescription="@string/cupsmall"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="28dp"
+            android:src="@drawable/ic_cup_svgrepo_com"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toStartOf="@+id/cupMedium"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintVertical_bias="0.034">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/cupLarge"
+            android:layout_width="83dp"
+            android:layout_height="74dp"
+            android:contentDescription="@string/cuplarge"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_cup_svgrepo_com"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline9">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/sugarMedium"
+            android:layout_width="60dp"
+            android:layout_height="66dp"
+            android:layout_marginEnd="36dp"
+            android:contentDescription="@string/sugar"
+            android:src="@drawable/ic_sugar_svgrepo_com__1_"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toStartOf="@+id/sugarLarge"
+            app:layout_constraintTop_toTopOf="@+id/guideline6"
+            app:layout_constraintVertical_bias="0.384">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/sugarSmall"
+            android:layout_width="42dp"
+            android:layout_height="47dp"
+            android:contentDescription="@string/sugar"
+            android:layout_marginEnd="22dp"
+            android:src="@drawable/ic_sugar_svgrepo_com"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toStartOf="@+id/sugarMedium"
+            app:layout_constraintTop_toTopOf="@+id/guideline6">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/sugarLarge"
+            android:layout_width="83dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/sugar"
+            android:src="@drawable/ic_sugar_svgrepo_com__2_"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline6"
+            app:layout_constraintVertical_bias="0.555">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/coffeeDetailsQuantity"
+            android:layout_width="58dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/_13"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toStartOf="@+id/addDetailsCoffee"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.0">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/addDetailsCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toStartOf="@+id/removeDetailsCoffee"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.518">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/removeDetailsCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_baseline_remove_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.518">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/sugar"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toStartOf="@+id/sugarSmall"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/guideline6"
+            app:layout_constraintVertical_bias="0.481">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/size"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toStartOf="@+id/cupSmall"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintVertical_bias="0.131">
+
+        </TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="155dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="34dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="356dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="448dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="554dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="252dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
