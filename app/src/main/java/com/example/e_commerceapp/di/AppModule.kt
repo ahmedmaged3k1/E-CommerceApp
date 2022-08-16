@@ -1,6 +1,7 @@
 package com.example.e_commerceapp.di
 
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.CoffeeApiService
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.CoffeeRemoteRepositoryImp
 import com.example.e_commerceapp.data.network.Credentials
 import com.example.e_commerceapp.domain.repositories.CoffeeRemoteRepository
 import com.example.e_commerceapp.domain.useCases.CoffeeUseCase

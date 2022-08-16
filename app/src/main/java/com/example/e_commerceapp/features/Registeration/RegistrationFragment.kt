@@ -33,10 +33,10 @@ class RegistrationFragment : Fragment() {
 
     private fun validateLogin(): Boolean {
         if (binding.registrationName.text.isEmpty() || binding.registrationEmail.text.isEmpty() || binding.registrationPassword.text.isEmpty()) {
-            val text = getString(R.string.registeration_erorr)
+            val text = "Please Complete All Fields"
             val duration = Toast.LENGTH_SHORT
-
-            Toast.makeText(context, text, duration).show()
+            val applicationContext = activity
+            Toast.makeText(applicationContext, text, duration).show()
 
             return false
         }
