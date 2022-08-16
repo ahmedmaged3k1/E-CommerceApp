@@ -27,16 +27,15 @@ class ProfileFragment : Fragment() {
 
     }
 
-     private fun updateOnClick() {
-         binding.confirmButtonProfile.setOnClickListener {
-             if (validateUpdate()) {
-                 Toast.makeText(activity, "Updated SSuccessfully", Toast.LENGTH_SHORT).show()
-             }
-         }
+    private fun updateOnClick() {
+        binding.confirmButtonProfile.setOnClickListener {
+            if (validateUpdate()) {
+                Toast.makeText(activity, "Updated SSuccessfully", Toast.LENGTH_SHORT).show()
+            }
+        }
 
 
     }
-
 
 
     private fun validateUpdate(): Boolean {
@@ -50,6 +49,7 @@ class ProfileFragment : Fragment() {
         updateProfile()
         return true
     }
+
     private fun updateProfile() {
 
     }
