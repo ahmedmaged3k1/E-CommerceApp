@@ -23,5 +23,9 @@
     <string name="name">name</string>
     <string name="cancel">cancel</string>
     <string name="confirm">confirm</string>
+    <string name="coffeeitem">coffeeItem</string>
+    <string name="_30_dollars">30 Dollars</string>
+    <string name="_13">13</string>
+    <string name="registeration_erorr">Please Complete All Fields</string>
 
 </resources>
