@@ -31,7 +31,7 @@
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:id="@+id/coffeeName"
-            android:text="@{coffee.name}"
+            android:text="@{coffee.productName}"
             android:textColor="@color/black"
             android:textFontWeight="800"
             android:textSize="25sp"

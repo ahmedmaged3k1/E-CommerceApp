@@ -44,3 +44,38 @@ object AppModule {
 
 }
 
+/*
+    @Provides
+    @Singleton
+    fun provideMyCoffeeApi(): CoffeeApiService {
+        val retrofit by lazy {
+            val okHttpClient = OkHttpClient.Builder().addInterceptor { chain ->
+                chain.proceed(chain.request().newBuilder().also {
+                    it.addHeader(
+                        "Authorization",
+                        "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE2NjA2Njc0MTMsImV4cCI6MTY2MDc2MzgxM30.RCOlsHxcgA4n8ivJRMvVTDmehV6VdbaTjSURz4vLJXOUwg0uNVTQBd-1j6xXa-mxXTAeP005rBTuXEIh036NIQ"
+                    )
+
+                }.build()).also {
+
+                    HttpLoggingInterceptor().apply {
+                        level = HttpLoggingInterceptor.Level.BODY
+
+                    }
+
+                }
+
+            }.build()
+            Retrofit.Builder().baseUrl(Credentials.baseUrl).client(okHttpClient)
+                .addConverterFactory(GsonConverterFactory.create()).build()
+
+        }
+
+
+        val api by lazy {
+            retrofit.create(CoffeeApiService::class.java)
+        }
+        return api
+    }
+
+ */

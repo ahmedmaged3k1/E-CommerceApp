@@ -132,7 +132,8 @@ dependencies {
 
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
-
+    //interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.4")
 }
 // Allow references to generated code
 kapt {
