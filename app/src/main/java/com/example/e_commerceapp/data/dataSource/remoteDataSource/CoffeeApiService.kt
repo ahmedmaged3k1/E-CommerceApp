@@ -6,15 +6,15 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface CoffeeApiService {
-    @GET("")
-    suspend fun getAllCoffeeProduct(@Query("apiKey") key: String): Response<Coffee>
+    @GET("/product/all")
+    suspend fun getAllCoffeeProduct(@Header("Authorization" )authToken : String): Response<Coffee>
 
-    @POST("")
-    suspend fun registerNewUser(@Body params: User,@Query("apiKey") key: String): Response<User>
+    @POST("api/auth/signup")
+    suspend fun registerNewUser(@Body params: User): Response<String>
 
-    @POST("")
-    suspend fun login(@Body params: User,@Query("apiKey") key: String): Response<User>
+    @POST("/api/auth/signin")
+    suspend fun login(@Body params: User): Response<User>
 
     @PUT("")
-    suspend fun updateProfile(@Body params: User,@Query("apiKey") key: String): Response<User>
+    suspend fun updateProfile(@Body params: User): Response<User>
 }

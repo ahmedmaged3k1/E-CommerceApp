@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/coffeeDetailsFragment"
-        android:name="com.example.e_commerceapp.features.CoffeeDetailsFragment"
+        android:name="com.example.e_commerceapp.features.coffeeDetails.CoffeeDetailsFragment"
         android:label="fragment_coffee_details"
         tools:layout="@layout/fragment_coffee_details" >
         <argument
