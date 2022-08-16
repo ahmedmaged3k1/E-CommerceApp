@@ -24,15 +24,15 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun buttonOnClick() {
-        binding.signUpButton.setOnClickListener {
+
+        binding.confirmButton.setOnClickListener {
             if (validateLogin()) navigate(it)
         }
 
     }
 
     private fun validateLogin(): Boolean {
-        if (binding.registrationName.text.isEmpty()||binding.registrationEmail.text.isEmpty()||binding.registrationPassword.text.isEmpty())
-        {
+        if (binding.registrationName.text.isEmpty() || binding.registrationEmail.text.isEmpty() || binding.registrationPassword.text.isEmpty()) {
             val text = "Please Complete All Fields"
             val duration = Toast.LENGTH_SHORT
             val applicationContext = activity
@@ -43,7 +43,8 @@ class RegistrationFragment : Fragment() {
         register()
         return true
     }
-    private fun register(){
+
+    private fun register() {
 
     }
 

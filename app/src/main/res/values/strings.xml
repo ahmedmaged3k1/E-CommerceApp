@@ -21,5 +21,7 @@
     <string name="a">a</string>
     <string name="signup">SignUp</string>
     <string name="name">name</string>
+    <string name="cancel">cancel</string>
+    <string name="confirm">confirm</string>
 
 </resources>
