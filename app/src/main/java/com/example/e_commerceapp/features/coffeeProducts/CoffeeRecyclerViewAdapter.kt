@@ -22,6 +22,7 @@ val diffCallback = object : DiffUtil.ItemCallback<Coffee>() {
     }
 }
 
+@Suppress("DEPRECATION")
 class CoffeeRecyclerViewAdapter :
     ListAdapter<Coffee, CoffeeRecyclerViewAdapter.CoffeeViewHolder>(diffCallback) {
 

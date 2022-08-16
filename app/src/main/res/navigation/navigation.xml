@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_loginFragment_to_navigationFragment"
             app:destination="@id/navigationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerationFragment"
+            app:destination="@id/registerationFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigationFragment"
@@ -49,5 +52,14 @@
         <argument
             android:name="coffee"
             app:argType="com.example.e_commerceapp.entities.Coffee" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerationFragment"
+        android:name="com.example.e_commerceapp.features.Registeration.RegistrationFragment"
+        android:label="fragment_registeration"
+        tools:layout="@layout/fragment_registeration" >
+        <action
+            android:id="@+id/action_registerationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

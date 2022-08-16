@@ -19,5 +19,7 @@
     <string name="espresso">Espresso</string>
     <string name="todo">TODO</string>
     <string name="a">a</string>
+    <string name="signup">SignUp</string>
+    <string name="name">name</string>
 
 </resources>

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.e_commerceapp.R
 import com.example.e_commerceapp.databinding.FragmentLoginBinding
-import com.example.e_commerceapp.databinding.FragmentOnBoardingBinding
 
 class LoginFragment : Fragment() {
 
@@ -18,19 +17,30 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
-        buttonOnClick()
+        getStartedButton()
+        registerButton()
         return binding.root
     }
-    private fun buttonOnClick() {
+    private fun getStartedButton() {
         binding.getStartedButton.setOnClickListener {
-            navigate(it)
+            navigateLogin(it)
         }
 
     }
+    private fun registerButton(){
+        binding.register.setOnClickListener {
+            navigateRegister(it)
+        }
+    }
 
-    private fun navigate(view: View) {
+
+    private fun navigateLogin(view: View) {
 
         view.findNavController().navigate(R.id.action_loginFragment_to_navigationFragment)
+    }
+    private fun navigateRegister(view: View) {
+
+        view.findNavController().navigate(R.id.action_loginFragment_to_registerationFragment)
     }
 
 
