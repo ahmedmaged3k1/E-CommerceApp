@@ -93,8 +93,7 @@
             android:layout_marginEnd="32dp"
             android:contentDescription="@string/cupmedium"
 
-            app:imageResource="@{coffee.selectedSize2}"
-            android:onClick="@{() -> coffee.onClickSize2()}"
+            app:imageResource="@{coffee.selectedSize}"
 
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toStartOf="@+id/cupLarge"
@@ -110,8 +109,8 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="28dp"
             android:contentDescription="@string/cupsmall"
-            android:onClick="@{() -> coffee.onClickSize1()}"
-            app:imageResource="@{coffee.selectedSize1}"
+
+            app:imageResource="@{coffee.selectedSize}"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toStartOf="@+id/cupMedium"
             app:layout_constraintTop_toTopOf="@+id/guideline9"
@@ -128,8 +127,7 @@
 
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:imageResource="@{coffee.selectedSize3}"
-            android:onClick="@{() -> coffee.onClickSize3()}"
+            app:imageResource="@{coffee.selectedSize}"
 
             app:layout_constraintTop_toTopOf="@+id/guideline9">
 
@@ -142,7 +140,7 @@
             app:imageResource="@{coffee.selectedSugar2}"
             android:layout_marginEnd="36dp"
             android:contentDescription="@string/sugar"
-            android:onClick="@{() -> coffee.onClickSugar2()}"
+
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toStartOf="@+id/sugarLarge"
             app:layout_constraintTop_toTopOf="@+id/guideline6"
@@ -157,7 +155,8 @@
             android:layout_height="47dp"
             android:layout_marginEnd="22dp"
             android:contentDescription="@string/sugar"
-            android:onClick="@{() -> coffee.onClickSugar1()}"            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toStartOf="@+id/sugarMedium"
             app:layout_constraintTop_toTopOf="@+id/guideline6">
 
@@ -170,7 +169,7 @@
             android:layout_marginEnd="20dp"
             android:contentDescription="@string/sugar"
             app:imageResource="@{coffee.selectedSugar3}"
-            android:onClick="@{() -> coffee.onClickSugar3()}"
+
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline6"
@@ -272,9 +271,12 @@
             android:layout_marginBottom="64dp"
             android:background="@drawable/round_corners_colured"
             android:text="@string/add_to_cart"
+<<<<<<< HEAD
             android:onClick="@{() -> coffee.addToCart()}"
 
 
+=======
+>>>>>>> parent of e9b546d (Details fragment data binding)
             android:textFontWeight="200"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
+<<<<<<< HEAD
 class CoffeeDetailsViewModel () :
     ViewModel() {
 
@@ -34,6 +35,25 @@ class CoffeeDetailsViewModel () :
 
     var coffeeCounter = MutableLiveData(0)
     var coffeePrice = MutableLiveData(0)
+=======
+    val smallSizePrice = 5
+    val mediumSizePrice = 10
+    val largeSizePrice = 15
+    val smallSugarPrice = 3
+    val mediumSugarPrice = 5
+    val largeSugarPrice = 7
+
+    val selectedSugar1: Int = R.drawable.ic_sugar_svgrepo_com
+    val selectedSugar2: Int = R.drawable.ic_sugar_svgrepo_com__1_
+    val selectedSugar3: Int = R.drawable.ic_sugar_svgrepo_com__2_
+    val selectedSize: Int = R.drawable.ic_cup_svgrepo_com
+
+
+    var coffeeCounter = MutableLiveData<Int>(0)
+    var coffeePrice = MutableLiveData<Int>(0)
+
+
+>>>>>>> parent of e9b546d (Details fragment data binding)
     var coffeeItem = Coffee()
     var coffeeCart = CoffeeCart(
         coffeeItem.id, coffeeItem.productName, "", coffeeItem.price,
@@ -42,27 +62,27 @@ class CoffeeDetailsViewModel () :
 
     fun increaseCounter() {
         if (coffeeCounter.value == 0) {
-            coffeePrice.value = 0
+            coffeePrice.value=0
         }
         coffeeCounter.value = coffeeCounter.value?.inc()
-        coffeePrice.value =
-            ((coffeeCounter.value?.let { coffeePrice.value?.plus(coffeeItem.price!!) }))
+        coffeePrice.value=((coffeeCounter.value?.let { coffeePrice.value?.plus( coffeeItem.price!!) }))
 
     }
 
     fun decreaseCounter() {
         if (coffeeCounter.value == 0) {
-            coffeePrice.value = 0
+            coffeePrice.value=0
             coffeeCounter.value = 0
             return
         }
         coffeeCounter.value = coffeeCounter.value?.dec()
-        coffeePrice.value =
-            ((coffeeCounter.value?.let { coffeePrice.value?.minus((coffeeItem.price!!)) }))
+        coffeePrice.value=((coffeeCounter.value?.let { coffeePrice.value?.minus((coffeeItem.price!!)) }))
+
 
 
     }
 
+<<<<<<< HEAD
     fun onClickSugar1() {
         selectedSugar1.value = R.drawable.sugar_hover_1
         selectedSugar2.value = R.drawable.ic_sugar_svgrepo_com__1_
@@ -138,4 +158,10 @@ class CoffeeDetailsViewModel () :
     /*private fun calculatePrice():Int{
         return
     }*/
+=======
+    fun onClick() {
+
+
+    }
+>>>>>>> parent of e9b546d (Details fragment data binding)
 }
