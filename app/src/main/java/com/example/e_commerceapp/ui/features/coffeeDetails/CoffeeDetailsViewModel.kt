@@ -30,17 +30,19 @@ class CoffeeDetailsViewModel : ViewModel() {
             coffeePrice.value=0
         }
         coffeeCounter.value = coffeeCounter.value?.inc()
-        coffeePrice.value=((coffeeCounter.value?.let { coffeePrice.value?.plus(it* coffeeItem.price!!) }))
+        coffeePrice.value=((coffeeCounter.value?.let { coffeePrice.value?.plus( coffeeItem.price!!) }))
 
     }
 
     fun decreaseCounter() {
-        if (coffeeCounter.value == 1) {
+        if (coffeeCounter.value == 0) {
             coffeePrice.value=0
+            coffeeCounter.value = 0
             return
         }
         coffeeCounter.value = coffeeCounter.value?.dec()
-        coffeePrice.value=((coffeeCounter.value?.let { coffeePrice.value?.minus(it* coffeeItem.price!!) }))
+        coffeePrice.value=((coffeeCounter.value?.let { coffeePrice.value?.minus((coffeeItem.price!!)) }))
+
 
 
     }
