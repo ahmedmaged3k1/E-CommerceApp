@@ -55,7 +55,7 @@
             android:text="@{coffee.coffeeItem.productName}"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="15sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/coffeeDetailsPrice"
             app:layout_constraintEnd_toStartOf="@+id/coffeeDetailsQuantity"
             app:layout_constraintHorizontal_bias="0.0"
@@ -271,7 +271,7 @@
             android:layout_marginBottom="64dp"
             android:background="@drawable/round_corners_colured"
             android:text="@string/add_to_cart"
-
+            android:onClick="@{() -> coffee.addToCart()}"
             android:textFontWeight="200"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

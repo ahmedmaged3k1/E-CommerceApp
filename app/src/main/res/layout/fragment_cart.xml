@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.features.cart.CartFragment">
 
-    <TextView
-
-        android:layout_width="139dp"
-        android:layout_height="170dp"
-        android:gravity="center"
-        android:text="@string/cart"
-        android:textSize="25sp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coffeeRecyclerViewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/coffe_item">
 
-    </TextView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

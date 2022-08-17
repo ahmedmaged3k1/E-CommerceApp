@@ -9,9 +9,9 @@ data class CoffeeCart(
     var productName: String? = null,
     @PrimaryKey
     var userName: String,
-    var price: Int? = null,
+    var price: Float? = null,
     var description: String? = null,
     var image: String? = null,
-    var sugar: Int? = null,
+    var sugar: Float? = null,
     var size: String? = null
 )

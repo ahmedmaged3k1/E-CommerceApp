@@ -8,12 +8,11 @@ import com.example.e_commerceapp.ui.features.coffeeProducts.CoffeeProductFragmen
 import com.example.e_commerceapp.ui.features.profile.ProfileFragment
 
 class PageAdapter(fragment: NavigationFragment) : FragmentStateAdapter(fragment) {
-    override fun getItemCount() = 3
+    override fun getItemCount() = 2
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> CoffeeProductFragment()
             1 -> ProfileFragment()
-            2 -> CartFragment()
             else -> throw  Resources.NotFoundException("Position not found")
 
 

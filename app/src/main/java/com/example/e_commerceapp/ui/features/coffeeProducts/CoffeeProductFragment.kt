@@ -1,7 +1,6 @@
 package com.example.e_commerceapp.ui.features.coffeeProducts
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +34,6 @@ class CoffeeProductFragment : Fragment() {
 
     private fun initializeRecyclerView() {
         viewModel.getAllCoffees("Bearer ${sharedViewModel.confirmedUser.token}")
-
         viewModel.coffeeList.observe(viewLifecycleOwner, Observer {
             coffeeRecyclerViewAdapter.submitList(viewModel.coffeeList.value)
             binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter

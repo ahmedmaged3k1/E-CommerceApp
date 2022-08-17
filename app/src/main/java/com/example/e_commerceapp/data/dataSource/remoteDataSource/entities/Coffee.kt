@@ -8,8 +8,8 @@ import kotlinx.parcelize.Parcelize
 data class Coffee(
     @SerializedName("id"          ) var id          : Int?    = null,
     @SerializedName("productName" ) var productName : String? = null,
-    @SerializedName("price"       ) var price       : Int?    = null,
+    @SerializedName("price"       ) var price       : Float?    = null,
     @SerializedName("description" ) var description : String? = null,
     @SerializedName("image"       ) var image       : String? = null,
-    @SerializedName("sugar"       ) var sugar       : Int?    = null,
+    @SerializedName("sugar"       ) var sugar       : Float?    = null,
     @SerializedName("size"        ) var size        : String? = null) : Parcelable

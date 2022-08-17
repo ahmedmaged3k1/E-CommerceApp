@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_coffeeDetailsFragment_to_navigationFragment"
             app:destination="@id/navigationFragment" />
+        <action
+            android:id="@+id/action_coffeeDetailsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerationFragment"
@@ -67,5 +70,19 @@
         <action
             android:id="@+id/action_registerationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.e_commerceapp.ui.features.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <argument
+            android:name="item"
+            app:argType="com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee" />
+        <action
+            android:id="@+id/action_cartFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment"
+            app:popUpTo="@id/navigationFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
