@@ -1,5 +1,10 @@
 package com.example.e_commerceapp.di
 
+import android.app.Application
+import android.content.Context
+import androidx.room.RoomDatabase
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.CoffeeCartDao
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.CoffeeDatabase
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.ApiService
 import com.example.e_commerceapp.data.network.Credentials
 import com.example.e_commerceapp.domain.repositories.RemoteRepository
@@ -53,6 +58,16 @@ object AppModule {
     @Singleton
     fun provideUserLoginUseCase(remoteRepository: RemoteRepository): UserLoginUseCase {
         return UserLoginUseCase(remoteRepository)
+    }
+    @Provides
+    @Singleton
+    fun provideRoomDb(context: Application): CoffeeDatabase {
+        return CoffeeDatabase.getInstance(context)
+    }
+    @Provides
+    @Singleton
+    fun provideRoomDao(coffeeDatabase: CoffeeDatabase): CoffeeCartDao {
+        return coffeeDatabase.coffeeDao
     }
 
 }

@@ -3,9 +3,10 @@ package com.example.e_commerceapp.domain.useCases
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
 import com.example.e_commerceapp.domain.repositories.LocalRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 
-class CartUseCase(private val localRepository: LocalRepository) {
+class CartUseCase @Inject constructor(private val localRepository: LocalRepository) {
     suspend fun getCartCoffee(name: String): List<CoffeeCart> {
 
         return localRepository.getCartCoffee(name)!!
