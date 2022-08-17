@@ -6,6 +6,9 @@ to use coffee items  API using MVVM Architecture, Coroutines, Retrofit2, Paginat
 
 Introduction
 -------------
+###MVVM Architecture 
+![1_scRS80AjzsGiAN3szmaoZw](https://user-images.githubusercontent.com/60134186/185244199-6526e3f8-cbf3-42ef-9c9e-13c781e6ff46.png)
+
 
 ### Layers
 ![3layer-1](https://user-images.githubusercontent.com/39988066/147699856-bc10356a-4772-439d-a2c1-b6020843f936.png)
@@ -25,8 +28,7 @@ Introduction
 #### Presentation Package
 - Considered as entery point for the app
 - Contains (Activity) that hosts presentation view
-- Contatins BaseApplication and all needed app info
--Single Activity App
+- Single Activity App
 
 #### Domain Package
 - Contains business model 
