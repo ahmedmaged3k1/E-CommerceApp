@@ -3,10 +3,18 @@
 Android Kotlin Clean Architecture App
 =======================================
 
-A Clean Architecture App that uses feature Modularization Architecture (app, presentation, domain, data, buildSrc) modules
-to hit TMDB API using MVVM Architecture, Coroutines, Retrofit2, Pagination, Live Data, Data Binding, Koin, SOLID Principles, Unit Testing using MockK and UI Testing using Espresso.
+A Clean Architecture App that uses feature Modularization Architecture (app, presentation, domain, data) modules
+to use coffee items  API using MVVM Architecture, Coroutines, Retrofit2, Pagination, Live Data, Data Binding, Hilt , SOLID Principles , Navigation Component , RoomDb.
 
-![app_screenshot](https://user-images.githubusercontent.com/39988066/147701770-ce6419aa-d212-4ce4-8657-f5742c75eef5.jpg)
+##ScreenShots 
+![image](https://user-images.githubusercontent.com/60134186/185239950-3794fae2-566d-484c-adf2-1e8d977176fd.png)
+![image](https://user-images.githubusercontent.com/60134186/185240793-7ed0f99b-0d4a-4b06-ae53-ee99e0c28666.png)
+![image](https://user-images.githubusercontent.com/60134186/185240852-93c133bc-e319-4d1b-8479-c93a0f1301b5.png)
+![image](https://user-images.githubusercontent.com/60134186/185240909-ad217dec-e89e-4b3c-ab5e-f87007c187e6.png)
+
+https://user-images.githubusercontent.com/60134186/185241666-38bb1c68-fc56-4ddc-b37c-ac6de5ab6508.mp4
+
+
 
 Introduction
 -------------
@@ -48,28 +56,4 @@ Introduction
 - Mapper domain model to presentation model
 - Handle data input from view via UseCase
 
-#### BuildSrc Module
-- Allows organizing gradle dependencies between all modules by using KTS
 
-### Unit Test
-You can easily write Unit Test up to 70% code coverage lines of code (LOC), if you write focus on 
-- Data: RepositoryImpl, Model Mapper 
-- Domain: UseCases
-- Presentation: ViewModel, Model Mapper
-
-License
---------
-
- Copyright (C) 2021 Shehab Alaa
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
