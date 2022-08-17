@@ -27,9 +27,10 @@ class LoginViewModel @Inject constructor(private val loginUseCase: UserLoginUseC
                 val user = User("", userEmail.value, userPassword.value)
 
                 if (loginUseCase.loginUser(user)?.token !=null) {
+
+                    confirmedUser = loginUseCase.loginUser(user)!!
                     observer.value = observer.value?.inc()
                     observer.value = observer.value?.dec()
-                    confirmedUser = loginUseCase.loginUser(user)!!
                 }
 
 

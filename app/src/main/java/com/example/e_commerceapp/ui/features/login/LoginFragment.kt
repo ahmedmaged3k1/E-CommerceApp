@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.example.e_commerceapp.R
@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
-    private val viewModel: LoginViewModel by viewModels()
+    private val viewModel: LoginViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,17 +40,15 @@ class LoginFragment : Fragment() {
 
     private fun validateLogin(view: View) {
         viewModel.observer.observe(viewLifecycleOwner, Observer {
-            if (it == 2)
-            {
+            if (it == 2) {
                 view.findNavController()
                     .navigate(
-                        com.example.e_commerceapp.ui.features.login.LoginFragmentDirections.actionLoginFragmentToNavigationFragment(
+                        LoginFragmentDirections.actionLoginFragmentToNavigationFragment(
                             viewModel.confirmedUser
                         )
                     )
                 binding.getStartedButton.isClickable = false
             }
-
 
 
         })

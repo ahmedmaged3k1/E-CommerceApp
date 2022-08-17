@@ -13,6 +13,7 @@ import javax.inject.Inject
 class CoffeeProductsViewModel @Inject constructor(private val coffeeUseCase: CoffeeProductsUseCase) : ViewModel() {
      val coffeeList = MutableLiveData<ArrayList<Coffee>>()
 
+
      fun getAllCoffees(authToken: String) {
          viewModelScope.launch {
              coffeeList.postValue(coffeeUseCase.getAllProducts(authToken) as ArrayList<Coffee>?)

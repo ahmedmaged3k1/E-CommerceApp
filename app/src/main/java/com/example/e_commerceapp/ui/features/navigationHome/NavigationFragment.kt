@@ -1,11 +1,14 @@
 package com.example.e_commerceapp.ui.features.navigationHome
 
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 import com.example.e_commerceapp.databinding.FragmentNavigationBinding
 import com.google.android.material.tabs.TabLayout
@@ -16,6 +19,7 @@ import com.wajahatkarim3.easyflipviewpager.CardFlipPageTransformer2
 class NavigationFragment : Fragment() {
 
     private lateinit var binding: FragmentNavigationBinding
+    private val args by navArgs<NavigationFragmentArgs>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
