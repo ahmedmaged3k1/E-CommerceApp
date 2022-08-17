@@ -7,11 +7,11 @@ to use coffee items  API using MVVM Architecture, Coroutines, Retrofit2, Paginat
 Introduction
 -------------
 ### MVVM Architecture 
-![1_scRS80AjzsGiAN3szmaoZw](https://user-images.githubusercontent.com/60134186/185244199-6526e3f8-cbf3-42ef-9c9e-13c781e6ff46.png)
+![mvvm](https://user-images.githubusercontent.com/60134186/185244558-c3916e54-5300-4fdd-9667-bfb946ed0130.png)
 
 
 ### Layers
-![3layer-1](https://user-images.githubusercontent.com/39988066/147699856-bc10356a-4772-439d-a2c1-b6020843f936.png)
+![images](https://user-images.githubusercontent.com/60134186/185244485-b13564a5-ec3d-4524-b915-d91aa5dab906.jpg)
 
 #### UI or Presentation Layer
 - This layer has all the Android UI components like Activities, Fragments, ViewModels, etc.
