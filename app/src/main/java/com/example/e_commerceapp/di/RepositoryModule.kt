@@ -1,6 +1,7 @@
 package com.example.e_commerceapp.di
 
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.RemoteRepositoryImp
+import com.example.e_commerceapp.domain.repositories.LocalRepository
 import com.example.e_commerceapp.domain.repositories.RemoteRepository
 import dagger.Binds
 import dagger.Module
@@ -14,8 +15,13 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindMyCoffeeRepository(
+    abstract fun bindMyRemoteRepository(
         myRepositoryImpl: RemoteRepositoryImp
     ): RemoteRepository
+    @Binds
+    @Singleton
+    abstract fun bindMyLocalRepository(
+        myRepositoryImpl: LocalRepository
+    ): LocalRepository
 
 }

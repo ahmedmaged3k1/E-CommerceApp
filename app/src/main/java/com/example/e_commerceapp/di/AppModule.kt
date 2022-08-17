@@ -2,7 +2,9 @@ package com.example.e_commerceapp.di
 
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.ApiService
 import com.example.e_commerceapp.data.network.Credentials
+import com.example.e_commerceapp.domain.repositories.LocalRepository
 import com.example.e_commerceapp.domain.repositories.RemoteRepository
+import com.example.e_commerceapp.domain.useCases.CartUseCase
 import com.example.e_commerceapp.domain.useCases.CoffeeProductsUseCase
 import com.example.e_commerceapp.domain.useCases.UserLoginUseCase
 import com.example.e_commerceapp.domain.useCases.UserRegistrationUseCase
@@ -44,6 +46,11 @@ object AppModule {
         return CoffeeProductsUseCase(remoteRepository)
     }
 
+    @Provides
+    @Singleton
+    fun provideMyCartUseCase(localRepository: LocalRepository) :  CartUseCase {
+        return CartUseCase(localRepository)
+    }
     @Provides
     @Singleton
     fun provideUserRegistrationUseCase(remoteRepository: RemoteRepository): UserRegistrationUseCase {
