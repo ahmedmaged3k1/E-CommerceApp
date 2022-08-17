@@ -22,7 +22,7 @@ Introduction
 #### Data Layer
 - All components related to data such as database, networking, api, shared preferences. It is an Android specific layer.
 
-### Modules
+### Packages 
 ![depends](https://user-images.githubusercontent.com/39988066/147700089-345e1a60-1651-4121-8616-f9273f8e0412.png)
 
 #### Presentation Package
