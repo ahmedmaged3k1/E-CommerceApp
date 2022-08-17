@@ -6,7 +6,7 @@ to use coffee items  API using MVVM Architecture, Coroutines, Retrofit2, Paginat
 
 Introduction
 -------------
-###MVVM Architecture 
+### MVVM Architecture 
 ![1_scRS80AjzsGiAN3szmaoZw](https://user-images.githubusercontent.com/60134186/185244199-6526e3f8-cbf3-42ef-9c9e-13c781e6ff46.png)
 
 
