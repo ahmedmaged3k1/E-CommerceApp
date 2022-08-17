@@ -4,13 +4,13 @@
     <data>
         <variable
             name="user"
-            type="com.example.e_commerceapp.features.login.LoginViewModel" />
+            type="com.example.e_commerceapp.ui.features.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.login.LoginFragment">
+        tools:context=".ui.features.login.LoginFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

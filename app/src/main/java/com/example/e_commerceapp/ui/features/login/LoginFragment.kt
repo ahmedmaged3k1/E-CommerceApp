@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.login
+package com.example.e_commerceapp.ui.features.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -44,7 +44,7 @@ class LoginFragment : Fragment() {
 
                 view.findNavController()
                     .navigate(
-                        LoginFragmentDirections.actionLoginFragmentToNavigationFragment(
+                        com.example.e_commerceapp.ui.features.login.LoginFragmentDirections.actionLoginFragmentToNavigationFragment(
                             viewModel.confirmedUser
                         )
                     )

@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.coffeeDetails
+package com.example.e_commerceapp.ui.features.coffeeDetails
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.coffeeProducts
+package com.example.e_commerceapp.ui.features.coffeeProducts
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerceapp.databinding.CoffeItemBinding
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
-import com.example.e_commerceapp.features.navigationHome.NavigationFragmentDirections
+import com.example.e_commerceapp.ui.features.navigationHome.NavigationFragmentDirections
 
 val diffCallback = object : DiffUtil.ItemCallback<Coffee>() {
     override fun areItemsTheSame(oldItem: Coffee, newItem: Coffee): Boolean {

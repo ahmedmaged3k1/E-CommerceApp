@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.registration
+package com.example.e_commerceapp.ui.features.registration
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

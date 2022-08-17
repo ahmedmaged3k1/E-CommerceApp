@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.coffeeProducts
+package com.example.e_commerceapp.ui.features.coffeeProducts
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

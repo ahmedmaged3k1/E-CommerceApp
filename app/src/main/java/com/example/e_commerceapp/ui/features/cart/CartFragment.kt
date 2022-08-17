@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.cart
+package com.example.e_commerceapp.ui.features.cart
 
 import android.os.Bundle
 import android.view.LayoutInflater

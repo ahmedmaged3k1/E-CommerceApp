@@ -6,13 +6,13 @@
 
         <variable
             name="user"
-            type="com.example.e_commerceapp.features.profile.ProfileFragmentViewModel" />
+            type="com.example.e_commerceapp.ui.features.profile.ProfileFragmentViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.profile.ProfileFragment">
+        tools:context=".ui.features.profile.ProfileFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

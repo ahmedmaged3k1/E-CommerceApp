@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.onBoarding
+package com.example.e_commerceapp.ui.features.onBoarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

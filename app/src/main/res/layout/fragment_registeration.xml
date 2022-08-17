@@ -6,13 +6,13 @@
 
         <variable
             name="user"
-            type="com.example.e_commerceapp.features.registration.RegistrationViewModel" />
+            type="com.example.e_commerceapp.ui.features.registration.RegistrationViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.registration.RegistrationFragment">
+        tools:context=".ui.features.registration.RegistrationFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

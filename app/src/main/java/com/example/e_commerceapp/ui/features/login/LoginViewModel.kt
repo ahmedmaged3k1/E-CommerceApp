@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.login
+package com.example.e_commerceapp.ui.features.login
 
 import android.content.ContentValues.TAG
 import android.util.Log

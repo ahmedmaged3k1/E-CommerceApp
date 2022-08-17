@@ -1,11 +1,11 @@
-package com.example.e_commerceapp.features.navigationHome
+package com.example.e_commerceapp.ui.features.navigationHome
 
 import android.content.res.Resources
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.e_commerceapp.features.cart.CartFragment
-import com.example.e_commerceapp.features.coffeeProducts.CoffeeProductFragment
-import com.example.e_commerceapp.features.profile.ProfileFragment
+import com.example.e_commerceapp.ui.features.cart.CartFragment
+import com.example.e_commerceapp.ui.features.coffeeProducts.CoffeeProductFragment
+import com.example.e_commerceapp.ui.features.profile.ProfileFragment
 
 class PageAdapter(fragment: NavigationFragment) : FragmentStateAdapter(fragment) {
     override fun getItemCount() = 3

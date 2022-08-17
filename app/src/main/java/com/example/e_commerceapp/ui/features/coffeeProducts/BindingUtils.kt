@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.features.coffeeProducts
+package com.example.e_commerceapp.ui.features.coffeeProducts
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

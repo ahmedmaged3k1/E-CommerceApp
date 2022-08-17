@@ -7,13 +7,13 @@
 
         <variable
             name="coffee"
-            type="com.example.e_commerceapp.features.coffeeDetails.CoffeeDetailsViewModel" />
+            type="com.example.e_commerceapp.ui.features.coffeeDetails.CoffeeDetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.coffeeDetails.CoffeeDetailsFragment">
+        tools:context=".ui.features.coffeeDetails.CoffeeDetailsFragment">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/backButton"

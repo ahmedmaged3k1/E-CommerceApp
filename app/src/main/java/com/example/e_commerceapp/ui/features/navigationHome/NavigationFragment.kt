@@ -1,12 +1,10 @@
-package com.example.e_commerceapp.features.navigationHome
+package com.example.e_commerceapp.ui.features.navigationHome
 
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
-import android.view.Window
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.e_commerceapp.databinding.FragmentNavigationBinding
