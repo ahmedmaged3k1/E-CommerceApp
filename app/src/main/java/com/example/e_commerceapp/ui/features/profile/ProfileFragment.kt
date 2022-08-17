@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import com.example.e_commerceapp.databinding.FragmentProfileBinding
 
 
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
-    private val viewModel: ProfileFragmentViewModel by viewModels()
+    private val viewModel: ProfileFragmentViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
