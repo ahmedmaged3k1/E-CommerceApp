@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.entities
+package com.example.e_commerceapp.data.dataSource.remoteDataSource.entities
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

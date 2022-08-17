@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_commerceapp.domain.useCases.UserLoginUseCase
-import com.example.e_commerceapp.entities.User
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

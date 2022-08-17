@@ -3,7 +3,7 @@ package com.example.e_commerceapp.features.coffeeDetails
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.e_commerceapp.R
-import com.example.e_commerceapp.entities.Coffee
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 
 class CoffeeDetailsViewModel : ViewModel() {
 

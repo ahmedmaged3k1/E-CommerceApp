@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerceapp.databinding.CoffeItemBinding
-import com.example.e_commerceapp.entities.Coffee
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 import com.example.e_commerceapp.features.navigationHome.NavigationFragmentDirections
 
 val diffCallback = object : DiffUtil.ItemCallback<Coffee>() {

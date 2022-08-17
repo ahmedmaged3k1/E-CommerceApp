@@ -1,9 +1,8 @@
 package com.example.e_commerceapp.data.dataSource.remoteDataSource
 
-import com.example.e_commerceapp.entities.Coffee
-import com.example.e_commerceapp.entities.User
-import com.example.e_commerceapp.entities.UserResponse
-import okhttp3.ResponseBody
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.User
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.UserResponse
 import retrofit2.Response
 import retrofit2.http.*
 

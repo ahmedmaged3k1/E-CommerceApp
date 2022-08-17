@@ -1,8 +1,8 @@
 package com.example.e_commerceapp.data.dataSource.remoteDataSource
 
 import com.example.e_commerceapp.domain.repositories.RemoteRepository
-import com.example.e_commerceapp.entities.Coffee
-import com.example.e_commerceapp.entities.User
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject

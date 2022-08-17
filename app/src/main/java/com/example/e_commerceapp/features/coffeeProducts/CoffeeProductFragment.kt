@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.e_commerceapp.databinding.FragmentCoffeeProductBinding
-import com.example.e_commerceapp.entities.Coffee
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 import dagger.hilt.android.AndroidEntryPoint
 
 

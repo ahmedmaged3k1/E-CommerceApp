@@ -3,7 +3,7 @@
     <data >
         <variable
             name="coffee"
-            type="com.example.e_commerceapp.entities.Coffee" />
+            type="com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

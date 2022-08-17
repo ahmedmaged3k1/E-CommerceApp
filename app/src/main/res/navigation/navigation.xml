@@ -45,7 +45,7 @@
             app:destination="@id/coffeeDetailsFragment" />
         <argument
             android:name="user"
-            app:argType="com.example.e_commerceapp.entities.User" />
+            app:argType="com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.User" />
     </fragment>
     <fragment
         android:id="@+id/coffeeDetailsFragment"
@@ -54,7 +54,7 @@
         tools:layout="@layout/fragment_coffee_details" >
         <argument
             android:name="coffee"
-            app:argType="com.example.e_commerceapp.entities.Coffee" />
+            app:argType="com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee" />
     </fragment>
     <fragment
         android:id="@+id/registerationFragment"
