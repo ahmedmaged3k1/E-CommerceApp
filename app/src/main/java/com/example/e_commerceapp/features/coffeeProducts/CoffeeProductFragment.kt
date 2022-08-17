@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.example.e_commerceapp.databinding.FragmentCoffeeProductBinding
+import com.example.e_commerceapp.entities.Coffee
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -25,30 +25,19 @@ class CoffeeProductFragment : Fragment() {
     ): View {
         binding = FragmentCoffeeProductBinding.inflate(inflater, container, false)
         initializeRecyclerView()
-
-
-        return binding.root
-    }
-
-
-    private fun initializeRecyclerView() {
-
         val token =
             "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJpYXQiOjE2NjA2Njc0MTMsImV4cCI6MTY2MDc2MzgxM30.RCOlsHxcgA4n8ivJRMvVTDmehV6VdbaTjSURz4vLJXOUwg0uNVTQBd-1j6xXa-mxXTAeP005rBTuXEIh036NIQ"
         viewModel.getAllCoffees("Bearer $token")
-        viewModel.coffeeList.observe(viewLifecycleOwner, Observer {
-            coffeeRecyclerViewAdapter.submitList(viewModel.coffeeList.value)
-        })
+        Log.d(TAG, "onCreateView entered : ${viewModel.coffeeList.value?.size}")
+        return binding.root
+    }
 
-        binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
-
+    private fun initializeViewModel() {
 
     }
 
-
-}
-/*
-  val espresso = Coffee(
+    private fun initializeRecyclerView() {
+        val espresso = Coffee(
             10,
             "espresso  coffee",
             20,
@@ -66,4 +55,13 @@ class CoffeeProductFragment : Fragment() {
             1,
             "2"
         )
- */
+
+
+        coffeeRecyclerViewAdapter.submitList(listOf(espresso, latte))
+        binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
+        Log.d(TAG, "initializeRecyclerView: ${coffeeRecyclerViewAdapter.currentList.size} ")
+
+    }
+
+
+}
