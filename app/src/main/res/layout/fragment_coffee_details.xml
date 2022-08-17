@@ -18,6 +18,7 @@
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/backButton"
             android:layout_width="53dp"
+
             android:layout_height="68dp"
             android:src="@drawable/ic_baseline_chevron_left_24"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -30,7 +31,7 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="305dp"
-
+            app:coffeeImage="@{coffee.coffeeItem}"
             android:layout_height="138dp"
             android:contentDescription="@string/coffeeitem"
             android:src="@drawable/ic_baseline_coffee_24"
@@ -43,17 +44,18 @@
 
         <TextView
             android:id="@+id/coffeeDetailsName"
-            android:layout_width="120dp"
-            android:layout_height="33dp"
+            android:layout_width="137dp"
+            android:layout_height="46dp"
+
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="7dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="@string/espresso"
+            android:text="@{coffee.coffeeItem.productName}"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="18sp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/coffeeDetailsPrice"
             app:layout_constraintEnd_toStartOf="@+id/coffeeDetailsQuantity"
             app:layout_constraintHorizontal_bias="0.0"
@@ -68,11 +70,11 @@
             android:layout_width="120dp"
             android:layout_height="33dp"
             android:layout_marginStart="12dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif"
 
             android:gravity="center"
-            android:text="@string/_30_dollars"
+            android:text="@{coffee.coffeeItem.price.toString()}"
             android:textColor="@color/black"
             android:textFontWeight="800"
             android:textSize="16sp"
@@ -89,7 +91,7 @@
             android:layout_height="66dp"
             android:layout_marginEnd="32dp"
             android:contentDescription="@string/cupmedium"
-            android:src="@drawable/ic_cup_svgrepo_com"
+
             app:imageResource="@{coffee.selectedSize}"
 
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -106,7 +108,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="28dp"
             android:contentDescription="@string/cupsmall"
-            android:src="@drawable/ic_cup_svgrepo_com"
+
             app:imageResource="@{coffee.selectedSize}"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toStartOf="@+id/cupMedium"
@@ -121,7 +123,7 @@
             android:layout_height="74dp"
             android:layout_marginEnd="20dp"
             android:contentDescription="@string/cuplarge"
-            android:src="@drawable/ic_cup_svgrepo_com"
+
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:imageResource="@{coffee.selectedSize}"
@@ -230,7 +232,7 @@
             android:layout_marginEnd="44dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="@string/_30_dollars"
+            android:text="@{coffee.coffeePrice.toString()}"
             android:textColor="@color/black"
             android:textFontWeight="800"
             android:textSize="20sp"

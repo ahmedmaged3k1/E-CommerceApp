@@ -36,6 +36,7 @@ class RegistrationFragment : Fragment() {
             {
                 view.findNavController()
                     .navigate(R.id.action_registerationFragment_to_loginFragment)
+                binding.confirmButton.isClickable = false
             }
 
         })

@@ -41,13 +41,18 @@ class LoginFragment : Fragment() {
     private fun validateLogin(view: View) {
         viewModel.observer.observe(viewLifecycleOwner, Observer {
             if (it == 2)
-
+            {
                 view.findNavController()
                     .navigate(
                         com.example.e_commerceapp.ui.features.login.LoginFragmentDirections.actionLoginFragmentToNavigationFragment(
                             viewModel.confirmedUser
                         )
                     )
+                binding.getStartedButton.isClickable = false
+            }
+
+
+
         })
 
     }

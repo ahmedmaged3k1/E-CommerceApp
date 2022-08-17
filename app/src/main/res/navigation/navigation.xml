@@ -55,6 +55,9 @@
         <argument
             android:name="coffee"
             app:argType="com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee" />
+        <action
+            android:id="@+id/action_coffeeDetailsFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerationFragment"
