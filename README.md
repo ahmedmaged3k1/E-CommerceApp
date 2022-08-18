@@ -52,6 +52,5 @@ Introduction
 ![image](https://user-images.githubusercontent.com/60134186/185240852-93c133bc-e319-4d1b-8479-c93a0f1301b5.png)
 ![image](https://user-images.githubusercontent.com/60134186/185240909-ad217dec-e89e-4b3c-ab5e-f87007c187e6.png)
 
-https://user-images.githubusercontent.com/60134186/185241666-38bb1c68-fc56-4ddc-b37c-ac6de5ab6508.mp4
 
 
