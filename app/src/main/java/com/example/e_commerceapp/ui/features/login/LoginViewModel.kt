@@ -1,12 +1,10 @@
 package com.example.e_commerceapp.ui.features.login
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.e_commerceapp.domain.useCases.UserLoginUseCase
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.User
+import com.example.e_commerceapp.domain.useCases.UserLoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -16,17 +14,18 @@ class LoginViewModel @Inject constructor(private val loginUseCase: UserLoginUseC
 
     var userEmail = MutableLiveData<String>()
     var userPassword = MutableLiveData<String>()
-     var confirmedUser = User()
+    var confirmedUser = User()
     var observer = MutableLiveData<Int>(1)
     fun login() {
-        Log.d(TAG, "login:entered  ")
+
         viewModelScope.launch {
-            if (userEmail.value?.isEmpty() == true || userPassword.value?.isEmpty() == true) {
+            if (userEmail.value?.isEmpty() == true || userPassword.value?.isEmpty() == true
+            ) {
                 return@launch
             } else {
                 val user = User("", userEmail.value, userPassword.value)
 
-                if (loginUseCase.loginUser(user)?.token !=null) {
+                if (loginUseCase.loginUser(user)?.token != null) {
 
                     confirmedUser = loginUseCase.loginUser(user)!!
                     observer.value = observer.value?.inc()

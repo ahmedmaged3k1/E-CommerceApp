@@ -8,12 +8,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.e_commerceapp.databinding.FragmentProfileBinding
+import com.example.e_commerceapp.ui.core.FormatChecker
+import com.example.e_commerceapp.ui.features.login.LoginViewModel
 
 
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     private val viewModel: ProfileFragmentViewModel by activityViewModels()
+    private val sharedViewModel: LoginViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,6 +24,8 @@ class ProfileFragment : Fragment() {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         binding.user = viewModel
+        viewModel.userEmail = sharedViewModel.userEmail
+
         binding.lifecycleOwner = this
         updateOnClick()
         return binding.root
@@ -39,13 +44,19 @@ class ProfileFragment : Fragment() {
 
 
     private fun validateUpdate(): Boolean {
-        if (binding.updateName.text.isEmpty() || binding.updateEmail.text.isEmpty() || binding.updatePassword.text.isEmpty()) {
+        if (binding.updateName.text.isEmpty() || binding.updateEmail.text.isEmpty() || binding.updatePassword.text.isEmpty() ||
+            FormatChecker.isValidEmail(binding.updateEmail.text.toString()) || FormatChecker.isValidName(
+                binding.updateName.text.toString()
+            ) ||
+            FormatChecker.isValidPassword(binding.updatePassword.text.toString())
+        ) {
             val text = "Please Complete All Fields"
             val duration = Toast.LENGTH_SHORT
             val applicationContext = activity
             Toast.makeText(applicationContext, text, duration).show()
             return false
         }
+
         updateProfile()
         return true
     }
