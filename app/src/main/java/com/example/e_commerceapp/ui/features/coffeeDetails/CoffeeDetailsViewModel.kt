@@ -7,9 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.e_commerceapp.R
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
+import com.example.e_commerceapp.domain.useCases.CartUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CoffeeDetailsViewModel : ViewModel() {
+@HiltViewModel
+class CoffeeDetailsViewModel @Inject constructor(private val cartUseCase: CartUseCase) : ViewModel() {
 
     private val smallSizePrice = 5
     private val mediumSizePrice = 10
@@ -60,11 +64,6 @@ class CoffeeDetailsViewModel : ViewModel() {
             ((coffeeCounter.value?.let {
                 coffeePrice.value?.minus((coffeeItem.price!!))?.toInt() ?: 0
             }))
-
-
-    }
-
-    fun onClick() {
 
 
     }
@@ -136,9 +135,8 @@ class CoffeeDetailsViewModel : ViewModel() {
 
         cartItem.add(coffeeItem)
         coffeeList.value=cartItem
-        Log.d("TAG", "addToCart: ${coffeeList.value.toString()}")
         viewModelScope.launch {
-
+            cartUseCase.addItem(coffeeCart)
             observer.value = observer.value?.inc()
             observer.value = observer.value?.dec()
         }

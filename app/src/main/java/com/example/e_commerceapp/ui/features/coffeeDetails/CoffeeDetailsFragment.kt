@@ -14,8 +14,9 @@ import androidx.navigation.fragment.navArgs
 import com.example.e_commerceapp.R
 import com.example.e_commerceapp.databinding.FragmentCoffeeDetailsBinding
 import com.example.e_commerceapp.ui.features.login.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class CoffeeDetailsFragment : Fragment() {
     private lateinit var binding: FragmentCoffeeDetailsBinding
     private val args by navArgs<CoffeeDetailsFragmentArgs>()
@@ -47,7 +48,7 @@ class CoffeeDetailsFragment : Fragment() {
         viewModel.observer.observe(viewLifecycleOwner, Observer {
             if (it == 2) {
                 view.findNavController()
-                    .navigate(CoffeeDetailsFragmentDirections.actionCoffeeDetailsFragmentToCartFragment(viewModel.coffeeItem))
+                    .navigate(R.id.action_coffeeDetailsFragment_to_navigationFragment)
                 binding.addToCart.isClickable = false
             }
         })

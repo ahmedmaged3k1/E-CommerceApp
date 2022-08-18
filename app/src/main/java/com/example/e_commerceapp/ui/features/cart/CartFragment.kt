@@ -7,39 +7,40 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.navArgs
+import androidx.lifecycle.Observer
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 import com.example.e_commerceapp.databinding.FragmentCartBinding
-import com.example.e_commerceapp.domain.useCases.CartUseCase
-import com.example.e_commerceapp.ui.features.coffeeDetails.CoffeeDetailsViewModel
-import com.example.e_commerceapp.ui.features.coffeeProducts.CoffeeRecyclerViewAdapter
+import com.example.e_commerceapp.ui.features.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class CartFragment : Fragment() {
     private lateinit var binding: FragmentCartBinding
-    private val sharedViewModel: CoffeeDetailsViewModel by activityViewModels()
-    private val viewModel: CartViewModel by viewModels()
-    private val args by navArgs<CartFragmentArgs>()
 
-    private val coffeeRecyclerViewAdapter = CoffeeRecyclerViewAdapter()
+    private val viewModel: CartViewModel by viewModels()
+    private val sharedViewModel: LoginViewModel by activityViewModels()
+
+
+    private val coffeeRecyclerViewAdapter = CoffeeCartRecyclerViewAdapter()
     val list = mutableListOf<Coffee>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCartBinding.inflate(inflater, container, false)
-        initializeRecyclerView()
 
+        initializeRecyclerView()
         return binding.root
     }
 
     private fun initializeRecyclerView() {
-
-        list.add(args.item)
-        coffeeRecyclerViewAdapter.submitList(list)
-        binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
+        viewModel.getAllCartCoffees(sharedViewModel.confirmedUser.userName.toString())
+        viewModel.coffeeList.observe(viewLifecycleOwner, Observer {
+            coffeeRecyclerViewAdapter.submitList(viewModel.coffeeList.value)
+            binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
+        })
 
 
     }
+
 }
