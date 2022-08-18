@@ -10,10 +10,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 import com.example.e_commerceapp.databinding.FragmentCartBinding
+import com.example.e_commerceapp.domain.useCases.CartUseCase
 import com.example.e_commerceapp.ui.features.coffeeDetails.CoffeeDetailsViewModel
 import com.example.e_commerceapp.ui.features.coffeeProducts.CoffeeRecyclerViewAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class CartFragment : Fragment() {
     private lateinit var binding: FragmentCartBinding
     private val sharedViewModel: CoffeeDetailsViewModel by activityViewModels()
@@ -28,6 +30,7 @@ class CartFragment : Fragment() {
     ): View {
         binding = FragmentCartBinding.inflate(inflater, container, false)
         initializeRecyclerView()
+
         return binding.root
     }
 

@@ -1,5 +1,6 @@
 package com.example.e_commerceapp.di
 
+import com.example.e_commerceapp.data.dataSource.localDataSource.LocalRepositoryIml
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.RemoteRepositoryImp
 import com.example.e_commerceapp.domain.repositories.LocalRepository
 import com.example.e_commerceapp.domain.repositories.RemoteRepository
@@ -21,7 +22,7 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindMyLocalRepository(
-        myRepositoryImpl: LocalRepository
+        myRepositoryLocalImpl: LocalRepositoryIml
     ): LocalRepository
 
 }
