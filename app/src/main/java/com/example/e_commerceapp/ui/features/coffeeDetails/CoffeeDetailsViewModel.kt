@@ -1,6 +1,5 @@
 package com.example.e_commerceapp.ui.features.coffeeDetails
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,7 +12,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CoffeeDetailsViewModel @Inject constructor(private val cartUseCase: CartUseCase) : ViewModel() {
+class CoffeeDetailsViewModel @Inject constructor(private val cartUseCase: CartUseCase) :
+    ViewModel() {
 
     private val smallSizePrice = 5
     private val mediumSizePrice = 10
@@ -31,12 +31,13 @@ class CoffeeDetailsViewModel @Inject constructor(private val cartUseCase: CartUs
     var coffeeCounter = MutableLiveData(0)
     var coffeePrice = MutableLiveData(0)
     var coffeeItem = Coffee()
-        val coffeeCartList =MutableLiveData<MutableList<CoffeeCart>>()
-    val coffeeList =MutableLiveData<MutableList<Coffee>>()
-    val cartItem = mutableListOf<Coffee>()
+
+    private val coffeeList = MutableLiveData<MutableList<Coffee>>()
+    private val cartItem = mutableListOf<Coffee>()
     private var selectedSugar = 0
     private var selectedSize = 0
-    var coffeeCart = CoffeeCart(Math.random().toInt(),
+    var coffeeCart = CoffeeCart(
+        Math.random().toInt(),
         coffeeItem.id, coffeeItem.productName, "", coffeeItem.price,
         coffeeItem.description, coffeeItem.image, coffeeItem.sugar, coffeeItem.size
     )
@@ -134,7 +135,7 @@ class CoffeeDetailsViewModel @Inject constructor(private val cartUseCase: CartUs
         coffeeCart.size = coffeeItem.size
 
         cartItem.add(coffeeItem)
-        coffeeList.value=cartItem
+        coffeeList.value = cartItem
         viewModelScope.launch {
             cartUseCase.addItem(coffeeCart)
             observer.value = observer.value?.inc()

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.example.e_commerceapp.databinding.FragmentCoffeeProductBinding
 import com.example.e_commerceapp.ui.features.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,10 +33,10 @@ class CoffeeProductFragment : Fragment() {
 
     private fun initializeRecyclerView() {
         viewModel.getAllCoffees("Bearer ${sharedViewModel.confirmedUser.token}")
-        viewModel.coffeeList.observe(viewLifecycleOwner, Observer {
+        viewModel.coffeeList.observe(viewLifecycleOwner) {
             coffeeRecyclerViewAdapter.submitList(viewModel.coffeeList.value)
             binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
-        })
+        }
 
 
     }

@@ -15,6 +15,7 @@ fun ImageView.setCoffeeImage(item: Coffee?) {
             .into(this)
     }
 }
+
 @BindingAdapter("coffeeImageCart")
 fun ImageView.setCoffeeImageCart(item: CoffeeCart?) {
     item?.let {
@@ -23,9 +24,4 @@ fun ImageView.setCoffeeImageCart(item: CoffeeCart?) {
             .into(this)
     }
 }
-@BindingAdapter("coffeeDetails")
-fun ImageView.navigateCoffeeItem(item: Coffee?) {
-    item?.let {
 
-    }
-}

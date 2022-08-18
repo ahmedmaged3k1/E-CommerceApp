@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.example.e_commerceapp.R
 import com.example.e_commerceapp.databinding.FragmentLoginBinding
@@ -32,14 +31,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun registerNavigation(view: View) {
-        binding.register.setOnClickListener(View.OnClickListener {
+        binding.register.setOnClickListener {
             view.findNavController()
                 .navigate(R.id.action_loginFragment_to_registerationFragment)
-        })
+        }
     }
 
     private fun validateLogin(view: View) {
-        viewModel.observer.observe(viewLifecycleOwner, Observer {
+        viewModel.observer.observe(viewLifecycleOwner) {
             if (it == 2) {
                 view.findNavController()
                     .navigate(
@@ -51,7 +50,7 @@ class LoginFragment : Fragment() {
             }
 
 
-        })
+        }
 
     }
 

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 import com.example.e_commerceapp.databinding.FragmentCartBinding
 import com.example.e_commerceapp.ui.features.login.LoginViewModel
@@ -37,11 +36,11 @@ class CartFragment : Fragment() {
         viewModel.getAllCartCoffees(sharedViewModel.confirmedUser.userName.toString())
         binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
 
-        viewModel.coffeeList.observe(viewLifecycleOwner, Observer {list->
+        viewModel.coffeeList.observe(viewLifecycleOwner) { list ->
             val map = list.map { it }
             coffeeRecyclerViewAdapter.submitList(map)
 
-        })
+        }
 
 
     }

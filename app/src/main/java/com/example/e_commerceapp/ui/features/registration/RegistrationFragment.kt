@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.example.e_commerceapp.R
 import com.example.e_commerceapp.databinding.FragmentRegisterationBinding
@@ -31,15 +30,14 @@ class RegistrationFragment : Fragment() {
 
 
     private fun validateRegistration(view: View) {
-        viewModel.observer.observe(viewLifecycleOwner, Observer {
-            if (it == 2)
-            {
+        viewModel.observer.observe(viewLifecycleOwner) {
+            if (it == 2) {
                 view.findNavController()
                     .navigate(R.id.action_registerationFragment_to_loginFragment)
                 binding.confirmButton.isClickable = false
             }
 
-        })
+        }
 
     }
 

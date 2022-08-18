@@ -4,8 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
-import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
-import com.example.e_commerceapp.domain.repositories.LocalRepository
 import com.example.e_commerceapp.domain.useCases.CartUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

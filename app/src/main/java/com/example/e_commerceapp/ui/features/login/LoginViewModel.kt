@@ -15,7 +15,7 @@ class LoginViewModel @Inject constructor(private val loginUseCase: UserLoginUseC
     var userEmail = MutableLiveData<String>()
     var userPassword = MutableLiveData<String>()
     var confirmedUser = User()
-    var observer = MutableLiveData<Int>(1)
+    var observer = MutableLiveData(1)
     fun login() {
 
         viewModelScope.launch {
