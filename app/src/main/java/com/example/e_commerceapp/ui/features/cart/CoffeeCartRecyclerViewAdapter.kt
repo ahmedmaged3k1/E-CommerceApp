@@ -14,7 +14,7 @@ val diffCallback = object : DiffUtil.ItemCallback<CoffeeCart>() {
     }
 
     override fun areContentsTheSame(oldItem: CoffeeCart, newItem: CoffeeCart): Boolean {
-        return oldItem.id == newItem.id
+        return oldItem.itemId == newItem.itemId
 
 
     }

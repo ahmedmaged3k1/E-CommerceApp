@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
 
-@Database(entities = [CoffeeCart::class], version = 3, exportSchema = false)
+@Database(entities = [CoffeeCart::class], version = 6, exportSchema = false)
 abstract class CoffeeDatabase : RoomDatabase() {
 
     abstract val coffeeDao: CoffeeCartDao

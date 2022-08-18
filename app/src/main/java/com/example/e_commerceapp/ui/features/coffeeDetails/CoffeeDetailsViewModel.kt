@@ -36,7 +36,7 @@ class CoffeeDetailsViewModel @Inject constructor(private val cartUseCase: CartUs
     val cartItem = mutableListOf<Coffee>()
     private var selectedSugar = 0
     private var selectedSize = 0
-    var coffeeCart = CoffeeCart(
+    var coffeeCart = CoffeeCart(Math.random().toInt(),
         coffeeItem.id, coffeeItem.productName, "", coffeeItem.price,
         coffeeItem.description, coffeeItem.image, coffeeItem.sugar, coffeeItem.size
     )

@@ -35,9 +35,12 @@ class CartFragment : Fragment() {
 
     private fun initializeRecyclerView() {
         viewModel.getAllCartCoffees(sharedViewModel.confirmedUser.userName.toString())
-        viewModel.coffeeList.observe(viewLifecycleOwner, Observer {
-            coffeeRecyclerViewAdapter.submitList(viewModel.coffeeList.value)
-            binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
+        binding.coffeeRecyclerViewer.adapter = coffeeRecyclerViewAdapter
+
+        viewModel.coffeeList.observe(viewLifecycleOwner, Observer {list->
+            val map = list.map { it }
+            coffeeRecyclerViewAdapter.submitList(map)
+
         })
 
 
