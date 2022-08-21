@@ -17,6 +17,9 @@ interface LocalRepository {
     suspend fun getCartCoffee(name: String): List<CoffeeCart>?
 
 
-    suspend fun getCacheCoffee(coffee: List<Coffee>)
+    suspend fun insertAllCacheCoffee(coffee: List<Coffee>)
+
+    suspend fun getCacheCoffee(): List<Coffee>?
+
 
 }

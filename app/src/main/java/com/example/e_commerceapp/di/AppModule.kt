@@ -39,8 +39,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideMyCoffeeUseCase(remoteRepository: RemoteRepository): CoffeeProductsUseCase {
-        return CoffeeProductsUseCase(remoteRepository)
+    fun provideMyCoffeeUseCase(remoteRepository: RemoteRepository,localRepository: LocalRepository): CoffeeProductsUseCase {
+        return CoffeeProductsUseCase(remoteRepository,localRepository)
     }
 
     @Provides

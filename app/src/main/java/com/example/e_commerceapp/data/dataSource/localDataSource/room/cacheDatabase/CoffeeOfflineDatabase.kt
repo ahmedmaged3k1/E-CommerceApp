@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 
-@Database(entities = [Coffee::class], version = 7, exportSchema = false)
+@Database(entities = [Coffee::class], version = 9, exportSchema = false)
 abstract class CoffeeOfflineDatabase : RoomDatabase() {
 
     abstract val coffeeDao: CoffeeDao

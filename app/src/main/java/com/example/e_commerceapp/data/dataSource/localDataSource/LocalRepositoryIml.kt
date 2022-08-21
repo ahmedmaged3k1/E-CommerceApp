@@ -35,10 +35,14 @@ class LocalRepositoryIml @Inject constructor(private val coffeeDao: CoffeeCartDa
 
     }
 
-    override suspend fun getCacheCoffee(coffee: List<Coffee>) {
+    override suspend fun insertAllCacheCoffee(coffee: List<Coffee>) {
         withContext(Dispatchers.IO){
             coffeeCacheDao.insertAll(coffee)
         }
+    }
+    override suspend fun getCacheCoffee(): List<Coffee>? {
+        return coffeeCacheDao.getAllCoffee()
+
     }
 
 }
