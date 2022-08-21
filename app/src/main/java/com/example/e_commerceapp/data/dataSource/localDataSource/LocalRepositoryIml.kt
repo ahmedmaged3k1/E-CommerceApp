@@ -1,14 +1,15 @@
 package com.example.e_commerceapp.data.dataSource.localDataSource
 
-import android.util.Log
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
-import com.example.e_commerceapp.data.dataSource.localDataSource.room.CoffeeCartDao
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.cacheDatabase.CoffeeDao
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.cartDatabase.CoffeeCartDao
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 import com.example.e_commerceapp.domain.repositories.LocalRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class LocalRepositoryIml @Inject constructor(private val coffeeDao: CoffeeCartDao) :
+class LocalRepositoryIml @Inject constructor(private val coffeeDao: CoffeeCartDao,private val coffeeCacheDao: CoffeeDao) :
     LocalRepository {
 
     override suspend fun insert(coffee: CoffeeCart) {
@@ -32,6 +33,12 @@ class LocalRepositoryIml @Inject constructor(private val coffeeDao: CoffeeCartDa
     override suspend fun getCartCoffee(name: String): List<CoffeeCart>? {
         return coffeeDao.getCartCoffee(name)
 
+    }
+
+    override suspend fun getCacheCoffee(coffee: List<Coffee>) {
+        withContext(Dispatchers.IO){
+            coffeeCacheDao.insertAll(coffee)
+        }
     }
 
 }

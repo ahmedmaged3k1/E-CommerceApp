@@ -1,8 +1,10 @@
 package com.example.e_commerceapp.di
 
 import android.app.Application
-import com.example.e_commerceapp.data.dataSource.localDataSource.room.CoffeeCartDao
-import com.example.e_commerceapp.data.dataSource.localDataSource.room.CoffeeDatabase
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.cacheDatabase.CoffeeDao
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.cacheDatabase.CoffeeOfflineDatabase
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.cartDatabase.CoffeeCartDao
+import com.example.e_commerceapp.data.dataSource.localDataSource.room.cartDatabase.CoffeeDatabase
 import com.example.e_commerceapp.data.dataSource.localDataSource.sharedPrefrence.SharedPreference
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.ApiService
 import com.example.e_commerceapp.data.network.Credentials
@@ -63,6 +65,18 @@ object AppModule {
     @Singleton
     fun provideRoomDao(coffeeDatabase: CoffeeDatabase): CoffeeCartDao {
         return coffeeDatabase.coffeeDao
+
+    }
+    @Provides
+    @Singleton
+    fun provideRoomCacheDb(context: Application): CoffeeOfflineDatabase {
+        return CoffeeOfflineDatabase.getInstance(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRoomCacheDao(coffeeCacheDatabase: CoffeeOfflineDatabase): CoffeeDao {
+        return coffeeCacheDatabase.coffeeDao
 
     }
 

@@ -1,6 +1,7 @@
 package com.example.e_commerceapp.domain.repositories
 
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
+import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.Coffee
 
 interface LocalRepository {
 
@@ -14,4 +15,8 @@ interface LocalRepository {
 
 
     suspend fun getCartCoffee(name: String): List<CoffeeCart>?
+
+
+    suspend fun getCacheCoffee(coffee: List<Coffee>)
+
 }

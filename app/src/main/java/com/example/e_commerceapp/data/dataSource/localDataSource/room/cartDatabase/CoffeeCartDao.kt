@@ -1,4 +1,4 @@
-package com.example.e_commerceapp.data.dataSource.localDataSource.room
+package com.example.e_commerceapp.data.dataSource.localDataSource.room.cartDatabase
 
 import androidx.room.*
 import com.example.e_commerceapp.data.dataSource.localDataSource.entities.CoffeeCart
@@ -8,6 +8,8 @@ import com.example.e_commerceapp.data.dataSource.localDataSource.entities.Coffee
 interface CoffeeCartDao {
     @Insert
     suspend fun insert(coffee: CoffeeCart)
+
+
 
     @Update
     suspend fun update(coffee: CoffeeCart)
