@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.e_commerceapp.R
+import com.example.e_commerceapp.data.dataSource.localDataSource.sharedPrefrence.SharedPreference
 import com.example.e_commerceapp.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +22,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        SharedPreference.init(requireContext())
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.user = viewModel
         binding.lifecycleOwner = this

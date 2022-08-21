@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.e_commerceapp.databinding.FragmentProfileBinding
-import com.example.e_commerceapp.ui.core.FormatChecker
 import com.example.e_commerceapp.ui.features.login.LoginViewModel
 
 
@@ -35,7 +34,7 @@ class ProfileFragment : Fragment() {
     private fun updateOnClick() {
         binding.confirmButtonProfile.setOnClickListener {
             if (validateUpdate()) {
-                Toast.makeText(activity, "Updated SSuccessfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Updated Successfully", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -44,11 +43,8 @@ class ProfileFragment : Fragment() {
 
 
     private fun validateUpdate(): Boolean {
-        if (binding.updateName.text.isEmpty() || binding.updateEmail.text.isEmpty() || binding.updatePassword.text.isEmpty() ||
-            FormatChecker.isValidEmail(binding.updateEmail.text.toString()) || FormatChecker.isValidName(
-                binding.updateName.text.toString()
-            ) ||
-            FormatChecker.isValidPassword(binding.updatePassword.text.toString())
+        if (binding.updateName.text.isEmpty() || binding.updateEmail.text.isEmpty() || binding.updatePassword.text.isEmpty()
+
         ) {
             val text = "Please Complete All Fields"
             val duration = Toast.LENGTH_SHORT
