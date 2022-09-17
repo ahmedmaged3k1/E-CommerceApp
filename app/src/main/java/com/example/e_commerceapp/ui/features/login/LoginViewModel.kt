@@ -1,5 +1,10 @@
 package com.example.e_commerceapp.ui.features.login
 
+import android.app.Application
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,6 +12,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.e_commerceapp.data.dataSource.localDataSource.sharedPrefrence.SharedPreference
 import com.example.e_commerceapp.data.dataSource.remoteDataSource.entities.User
 import com.example.e_commerceapp.domain.useCases.UserLoginUseCase
+import dagger.hilt.android.internal.Contexts.getApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -42,6 +48,8 @@ class LoginViewModel @Inject constructor(private val loginUseCase: UserLoginUseC
         }
 
     }
+
+
 }
 /*
 
